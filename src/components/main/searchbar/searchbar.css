@@ -1,0 +1,23 @@
+@import 'src/assets/fonts.css';
+
+.search-input{
+    font-weight: 400;
+    font-size: 15px;
+    font-family: "inter";
+    background: #fff;
+    color: #B5B5B5;
+}
+
+.searchbar-icon{
+    width: 17px;
+    height: 17px;
+}
+
+.searchbar-container{
+    display: flex;
+    width: 100%;
+    border-radius: 30px;
+    padding: 11px 20px 11px 20px;
+    gap: 10px;
+    background: #FFFFFF;
+}

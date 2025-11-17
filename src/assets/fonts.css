@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "inter";
+    src:
+        url("src/assets/fonts/inter/Inter_24pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "mulish_extrabold";
+    src:
+        url("src/assets/fonts/mulish/Mulish-ExtraBold.ttf")
+}

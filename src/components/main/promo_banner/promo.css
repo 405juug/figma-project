@@ -1,0 +1,9 @@
+@import 'src/assets/fonts.css';
+
+.banner-img {
+    margin-top: 15px;
+    width: 600px;
+    top: 151px;
+    left: 5px;
+    border-radius: 20px;
+}
