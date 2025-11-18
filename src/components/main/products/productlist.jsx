@@ -24,11 +24,11 @@ export default function ProductList() {
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite()}
+                        onClick={() => toggleFavorite(1)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(1)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -64,11 +64,11 @@ export default function ProductList() {
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
+                        onClick={() => toggleFavorite(2)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(2)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -83,11 +83,11 @@ export default function ProductList() {
                 <div className="bottom-section">
                     <div className="product-text">
                         <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
-                            <p className="discount">-20%</p>
+                            <p className="product-newprice">2 700 ₽</p>
+                            <p className="product-oldprice">3 000 ₽</p>
+                            <p className="discount">-10%</p>
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
+                        <p className="product-title">Свитшот женский укороченный Yamal est.2017</p>
                     </div>
 
                     <button className="product-select">Выбрать</button>
@@ -98,16 +98,15 @@ export default function ProductList() {
 
                 <div className="top-section">
                     <div className="badges">
-                        <div className="badge hit">ХИТ</div>
-                        <div className="badge sale">SALE</div>
+                        <div className="badge new">NEW</div>
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
+                        onClick={() => toggleFavorite(3)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(3)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -122,11 +121,9 @@ export default function ProductList() {
                 <div className="bottom-section">
                     <div className="product-text">
                         <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
-                            <p className="discount">-20%</p>
+                            <p className="product-newprice">1 550 ₽</p>
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
+                        <p className="product-title">Шапка Yamal комбинация с бумбономапша</p>
                     </div>
 
                     <button className="product-select">Выбрать</button>
@@ -137,16 +134,15 @@ export default function ProductList() {
 
                 <div className="top-section">
                     <div className="badges">
-                        <div className="badge hit">ХИТ</div>
                         <div className="badge sale">SALE</div>
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
+                        onClick={() => toggleFavorite(4)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(4)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -161,11 +157,11 @@ export default function ProductList() {
                 <div className="bottom-section">
                     <div className="product-text">
                         <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
+                            <p className="product-newprice">640 ₽</p>
+                            <p className="product-oldprice">800 ₽</p>
                             <p className="discount">-20%</p>
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
+                        <p className="product-title">Брелок фирменный «Созвездие»</p>
                     </div>
 
                     <button className="product-select">Выбрать</button>
@@ -176,16 +172,15 @@ export default function ProductList() {
 
                 <div className="top-section">
                     <div className="badges">
-                        <div className="badge hit">ХИТ</div>
-                        <div className="badge sale">SALE</div>
+                        <div className="badge new">NEW</div>
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
+                        onClick={() => toggleFavorite(5)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(5)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -200,11 +195,9 @@ export default function ProductList() {
                 <div className="bottom-section">
                     <div className="product-text">
                         <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
-                            <p className="discount">-20%</p>
+                            <p className="product-newprice">3 850 ₽</p>
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
+                        <p className="product-title">Шорты мужские Yamal</p>
                     </div>
 
                     <button className="product-select">Выбрать</button>
@@ -215,16 +208,15 @@ export default function ProductList() {
 
                 <div className="top-section">
                     <div className="badges">
-                        <div className="badge hit">ХИТ</div>
-                        <div className="badge sale">SALE</div>
+                        <div className="badge premium">PREMIUM</div>
                     </div>
                     <button
                         className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
+                        onClick={() => toggleFavorite(6)}
                     >
                         <img
                             src={
-                                isFavorite[1]
+                                isFavorite.includes(6)
                                     ? "src/assets/images/main/product_list/heart.png"
                                     : "src/assets/images/main/product_list/heart_active.png"
                             }
@@ -239,11 +231,9 @@ export default function ProductList() {
                 <div className="bottom-section">
                     <div className="product-text">
                         <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
-                            <p className="discount">-20%</p>
+                            <p className="product-newprice">10 000 ₽</p>
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
+                        <p className="product-title">Сертификат Yamal 10000</p>
                     </div>
 
                     <button className="product-select">Выбрать</button>

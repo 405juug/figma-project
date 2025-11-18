@@ -6,6 +6,16 @@
 
 @font-face {
     font-family: "mulish_extrabold";
+    src: url("src/assets/fonts/mulish/Mulish-ExtraBold.ttf")
+}
+
+@font-face {
+    font-family: "inter_bold";
     src:
-        url("src/assets/fonts/mulish/Mulish-ExtraBold.ttf")
+        url("src/assets/fonts/inter/Inter_18pt-Bold.ttf")
+}
+
+@font-face {
+    font-family: "inter_semibold";
+    src: url("src/assets/fonts/inter/Inter_18pt-SemiBold.ttf")
 }

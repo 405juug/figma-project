@@ -26,6 +26,12 @@
     line-height: 0;
 }
 
+.category-button:focus,
+.category-button:active{
+    outline: none;
+    border: none;
+}
+
 .category-text{
     color: #292928;
     font-size: 11px;
