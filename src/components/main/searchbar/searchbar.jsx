@@ -16,6 +16,20 @@ export default function SearchBar() {
     ];
 
     useEffect(() => {
+        const handleEscape = (e) => {
+            if(e.key === "Escape") {
+                setOpen(false);
+            }
+        };
+
+        if(open){
+            window.addEventListener("keydown", handleEscape);
+        }
+
+        return () => window.removeEventListener("keydown", handleEscape);
+    }, [open]);
+
+    useEffect(() => {
         if (open) {
             document.body.style.overflowY = "hidden";
 

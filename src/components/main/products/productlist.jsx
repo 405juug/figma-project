@@ -29,8 +29,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(1)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />
@@ -69,8 +69,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(2)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />
@@ -107,8 +107,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(3)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />
@@ -143,8 +143,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(4)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />
@@ -181,8 +181,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(5)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />
@@ -217,8 +217,8 @@ export default function ProductList() {
                         <img
                             src={
                                 isFavorite.includes(6)
-                                    ? "src/assets/images/main/product_list/heart.png"
-                                    : "src/assets/images/main/product_list/heart_active.png"
+                                    ? "src/assets/images/main/product_list/heart_active.png"
+                                    : "src/assets/images/main/product_list/heart.png"
                             }
                             alt="favorite"
                         />

@@ -85,14 +85,16 @@
 
 .suggestion-item{
     padding: 10px;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
     border-radius: 8px;
     color: #292928;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+    font-family: "inter";
+    font-weight: 400;
 }
 
 .suggestion-item:hover{
