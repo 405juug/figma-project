@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import './productlist.css'
+import './productlist.css';
 
-export default function ProductList() {
+export default function ProductList({ cart, addToCart, removeFromCart }) {
 
     const [isFavorite, setIsFavorite] = useState([]);
 
@@ -13,242 +13,80 @@ export default function ProductList() {
         );
     };
 
-    return(
+    const products = [
+        {id: 1, img: "src/assets/images/main/product_list/1.png", price: "2 800 ₽", old: "3 500 ₽", discount: "-20%", title: "Футболка мужская Комары"},
+        {id: 2, img: "src/assets/images/main/product_list/2.jpg", price: "2 700 ₽", old: "3 000 ₽", discount: "-10%", title: "Свитшот женский укороченный Yamal est.2017"},
+        {id: 3, img: "src/assets/images/main/product_list/3.jpg", price: "1 550 ₽", title: "Шапка Yamal комбинация с бумбономапша"},
+        {id: 4, img: "src/assets/images/main/product_list/4.jpg", price: "640 ₽", old: "800 ₽", discount: "-20%", title: "Брелок фирменный «Созвездие»"},
+        {id: 5, img: "src/assets/images/main/product_list/5.jpg", price: "3 850 ₽", title: "Шорты мужские Yamal"},
+        {id: 6, img: "src/assets/images/main/product_list/6.jpg", price: "10 000 ₽", title: "Сертификат Yamal 10000"},
+    ];
+
+    return (
         <div className="product-list">
-            <div className="product-card">
+            {products.map(product => (
+                <div className="product-card" key={product.id}>
 
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge hit">ХИТ</div>
-                        <div className="badge sale">SALE</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(1)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(1)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/1.png" alt="1_img" id="product1" className="product-img"/>
-                    </div>
-                </div>
+                    <div className="top-section">
 
+                        <button
+                            className="btn-favorite"
+                            onClick={() => toggleFavorite(product.id)}
+                        >
+                            <img
+                                src={
+                                    isFavorite.includes(product.id)
+                                        ? "src/assets/images/main/product_list/heart_active.png"
+                                        : "src/assets/images/main/product_list/heart.png"
+                                }
+                                alt="Favorite"
+                            />
+                        </button>
 
-
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">2 800 ₽</p>
-                            <p className="product-oldprice">3 500 ₽</p>
-                            <p className="discount">-20%</p>
+                        <div className="product-img-container">
+                            <img
+                                src={product.img}
+                                alt={product.title}
+                                className="product-img"
+                            />
                         </div>
-                        <p className="product-title">Футболка мужская Комары</p>
                     </div>
 
-                    <button className="product-select">Выбрать</button>
-                </div>
-            </div>
+                    <div className="bottom-section">
+                        <div className="product-text">
+                            <div className="product-price">
+                                <p className="product-newprice">{product.price}</p>
 
-            <div className="product-card">
+                                {product.old && (
+                                    <p className="product-oldprice">{product.old}</p>
+                                )}
 
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge premium">ПРЕМИУМ</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(2)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(2)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/2.jpg" alt="2_img" id="product2" className="product-img"/>
-                    </div>
-                </div>
+                                {product.discount && (
+                                    <p className="discount">{product.discount}</p>
+                                )}
+                            </div>
 
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">2 700 ₽</p>
-                            <p className="product-oldprice">3 000 ₽</p>
-                            <p className="discount">-10%</p>
+                            <p className="product-title">{product.title}</p>
                         </div>
-                        <p className="product-title">Свитшот женский укороченный Yamal est.2017</p>
+
+                        {cart[product.id] ? (
+                            <div className="quantity-controls">
+                                <button className="qty-btn" onClick={() => removeFromCart(product.id)}>-</button>
+                                <span className="qty-number">{cart[product.id]}</span>
+                                <button className="qty-btn" onClick={() => addToCart(product.id)}>+</button>
+                            </div>
+                        ) : (
+                            <button
+                                className="product-select"
+                                onClick={() => addToCart(product.id)}
+                            >
+                                Выбрать
+                            </button>
+                        )}
                     </div>
 
-                    <button className="product-select">Выбрать</button>
                 </div>
-            </div>
-
-            <div className="product-card">
-
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge new">NEW</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(3)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(3)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/3.jpg" alt="3_img" id="product3" className="product-img"/>
-                    </div>
-                </div>
-
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">1 550 ₽</p>
-                        </div>
-                        <p className="product-title">Шапка Yamal комбинация с бумбономапша</p>
-                    </div>
-
-                    <button className="product-select">Выбрать</button>
-                </div>
-            </div>
-
-            <div className="product-card">
-
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge sale">SALE</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(4)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(4)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/4.jpg" alt="4_img" id="product4" className="product-img"/>
-                    </div>
-                </div>
-
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">640 ₽</p>
-                            <p className="product-oldprice">800 ₽</p>
-                            <p className="discount">-20%</p>
-                        </div>
-                        <p className="product-title">Брелок фирменный «Созвездие»</p>
-                    </div>
-
-                    <button className="product-select">Выбрать</button>
-                </div>
-            </div>
-
-            <div className="product-card">
-
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge new">NEW</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(5)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(5)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/5.jpg" alt="5_img" id="product5" className="product-img"/>
-                    </div>
-                </div>
-
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">3 850 ₽</p>
-                        </div>
-                        <p className="product-title">Шорты мужские Yamal</p>
-                    </div>
-
-                    <button className="product-select">Выбрать</button>
-                </div>
-            </div>
-
-            <div className="product-card">
-
-                <div className="top-section">
-                    <div className="badges">
-                        <div className="badge premium">PREMIUM</div>
-                    </div>
-                    <button
-                        className="btn-favorite"
-                        onClick={() => toggleFavorite(6)}
-                    >
-                        <img
-                            src={
-                                isFavorite.includes(6)
-                                    ? "src/assets/images/main/product_list/heart_active.png"
-                                    : "src/assets/images/main/product_list/heart.png"
-                            }
-                            alt="favorite"
-                        />
-                    </button>
-                    <div className="product-img-container">
-                        <img src="src/assets/images/main/product_list/6.jpg" alt="6_img" id="product6" className="product-img"/>
-                    </div>
-                </div>
-
-                <div className="bottom-section">
-                    <div className="product-text">
-                        <div className="product-price">
-                            <p className="product-newprice">10 000 ₽</p>
-                        </div>
-                        <p className="product-title">Сертификат Yamal 10000</p>
-                    </div>
-
-                    <button className="product-select">Выбрать</button>
-                </div>
-            </div>
-
-
+            ))}
         </div>
-    )
+    );
 }
-
-
-
-
-
-
-
-

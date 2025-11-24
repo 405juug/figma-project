@@ -1,7 +1,11 @@
-export default function Catalog() {
+import ProductList from "../../components/main/products/productlist.jsx";
+
+export default function Catalog({ cart, addToCart, removeFromCart }) {
     return(
-        <div>
-            Каталог
-        </div>
+        <ProductList
+            cart={cart}
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+        />
     );
 }
