@@ -35,10 +35,18 @@ function App() {
         })
     }
 
+    const products = [
+        {id: 1, img: "src/assets/images/main/product_list/1.png", price: "2 800 ₽", title: "Футболка мужская Комары"},
+        {id: 2, img: "src/assets/images/main/product_list/2.jpg", price: "2 700 ₽", title: "Свитшот женский укороченный Yamal est.2017"},
+        {id: 3, img: "src/assets/images/main/product_list/3.jpg", price: "1 550 ₽", title: "Шапка Yamal комбинация с бумбономапша"},
+        {id: 4, img: "src/assets/images/main/product_list/4.jpg", price: "640 ₽", title: "Брелок фирменный «Созвездие»"},
+        {id: 5, img: "src/assets/images/main/product_list/5.jpg", price: "3 850 ₽", title: "Шорты мужские Yamal"},
+        {id: 6, img: "src/assets/images/main/product_list/6.jpg", price: "10 000 ₽", title: "Сертификат Yamal 10000"},
+    ];
+
     return (
         <Router>
             <Header />
-
                 <Routes>
                     <Route path="/" element={<Home
                         cart = {cart}
@@ -59,9 +67,11 @@ function App() {
                         cart={cart}
                         addToCart={addToCart}
                         removeFromCart={removeFromCart}
+                        products={products}
                     />} />
                     <Route path="/profile" element={<Profile />} />
                 </Routes>
+
 
             <Footer />
         </Router>
