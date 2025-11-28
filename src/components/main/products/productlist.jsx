@@ -1,27 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import './productlist.css';
 
-export default function ProductList({ cart, addToCart, removeFromCart }) {
-
-    const [isFavorite, setIsFavorite] = useState([]);
-
-    const toggleFavorite = (id) => {
-        setIsFavorite(prev =>
-            prev.includes(id)
-                ? prev.filter(item => item !== id)
-                : [...prev, id]
-        );
-    };
-
-    const products = [
-        {id: 1, img: "src/assets/images/main/product_list/1.png", price: "2 800 ₽", old: "3 500 ₽", discount: "-20%", title: "Футболка мужская Комары"},
-        {id: 2, img: "src/assets/images/main/product_list/2.jpg", price: "2 700 ₽", old: "3 000 ₽", discount: "-10%", title: "Свитшот женский укороченный Yamal est.2017"},
-        {id: 3, img: "src/assets/images/main/product_list/3.jpg", price: "1 550 ₽", title: "Шапка Yamal комбинация с бумбономапша"},
-        {id: 4, img: "src/assets/images/main/product_list/4.jpg", price: "640 ₽", old: "800 ₽", discount: "-20%", title: "Брелок фирменный «Созвездие»"},
-        {id: 5, img: "src/assets/images/main/product_list/5.jpg", price: "3 850 ₽", title: "Шорты мужские Yamal"},
-        {id: 6, img: "src/assets/images/main/product_list/6.jpg", price: "10 000 ₽", title: "Сертификат Yamal 10000"},
-    ];
-
+export default function ProductList({ cart, addToCart, removeFromCart, toggleFavorite, isFavorite, products }) {
     return (
         <div className="product-list">
             {products.map(product => (

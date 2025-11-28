@@ -1,0 +1,14 @@
+.catalog-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: #292928;
+    font-family: inter_bold;
+}
+
+.catalog-container{
+    padding-bottom: 70px;
+}
+
+.catalog__header{
+    padding-bottom: 15px;
+}

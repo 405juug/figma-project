@@ -15,6 +15,7 @@ import Profile from './pages/Profile/Profile.jsx'
 function App() {
 
     const [cart, setCart] = useState({});
+    const [isFavorite, setIsFavorite] = useState([]);
 
     const addToCart = (id) => {
         setCart(prev => ({
@@ -35,6 +36,14 @@ function App() {
         })
     }
 
+    const toggleFavorite = (id) => {
+        setIsFavorite(prev =>
+            prev.includes(id)
+                ? prev.filter(item => item !== id)
+                : [...prev, id]
+        );
+    };
+
     const products = [
         {id: 1, img: "src/assets/images/main/product_list/1.png", price: "2 800 ₽", title: "Футболка мужская Комары"},
         {id: 2, img: "src/assets/images/main/product_list/2.jpg", price: "2 700 ₽", title: "Свитшот женский укороченный Yamal est.2017"},
@@ -49,20 +58,34 @@ function App() {
             <Header />
                 <Routes>
                     <Route path="/" element={<Home
+                        products = {products}
+                        isFavorite = {isFavorite}
+                        toggleFavorite = {toggleFavorite}
                         cart = {cart}
                         addToCart = {addToCart}
                         removeFromCart = {removeFromCart}
                     /> } />
-                    <Route path="/catalog" element={<Catalog
-                        cart={cart}
-                        addToCart={addToCart}
-                        removeFromCart={removeFromCart}
-                    />} />
-                    <Route path="/favorites" element={<Favorites
-                        cart={cart}
-                        addToCart={addToCart}
-                        removeFromCart={removeFromCart}
-                    />} />
+                    <Route path="/catalog" element={
+                        <Catalog
+                            cart={cart}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
+                            isFavorite={isFavorite}
+                            toggleFavorite={toggleFavorite}
+                            products={products}
+                        />
+                    } />
+
+                    <Route path="/favorites" element={
+                        <Favorites
+                            products={products}
+                            favorites={isFavorite}
+                            toggleFavorite={toggleFavorite}
+                            cart={cart}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
+                        />
+                    } />
                     <Route path="/cart" element={<Cart
                         cart={cart}
                         addToCart={addToCart}
