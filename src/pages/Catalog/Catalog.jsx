@@ -6,7 +6,7 @@ export default function Catalog({ cart, addToCart, removeFromCart, products, isF
         <div className="catalog">
             <div className="catalog__header">
                 <p1 className="catalog-title">
-                    Catalog
+                    Каталог
                 </p1>
             </div>
 

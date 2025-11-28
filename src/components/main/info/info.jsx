@@ -6,7 +6,7 @@ export default function Info() {
         <div className="info">
             <p className="developed-by">Разработано на платформе Noxer</p>
             <button className="tg-bttn">
-                <img src="src/assets/images/main/info/icon.png" className="developed_tg" />
+                <img src="public/images/main/info/icon.png" className="developed_tg" />
                 <p className="info-nickname">noxerai_bot</p>
             </button>
         </div>

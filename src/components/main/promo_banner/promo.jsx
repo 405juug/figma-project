@@ -9,7 +9,7 @@ export default function Promo() {
                     <img
                         className="banner-img"
                         alt="промо баннер"
-                        src="src/assets/images/main/promo-banner.png"
+                        src="public/images/main/promo-banner.png"
 
                     />
                 </a>

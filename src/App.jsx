@@ -11,6 +11,14 @@ import Cart from './pages/Cart/Cart.jsx'
 import Catalog from './pages/Catalog/Catalog.jsx'
 import Favorites from './pages/Favorites/Favorites.jsx'
 import Profile from './pages/Profile/Profile.jsx'
+import ProductPage from './pages/ProductPage/ProductPage.jsx'
+
+import img1 from '../public/images/main/product_list/1.png';
+import img2 from '../public/images/main/product_list/2.jpg';
+import img3 from '../public/images/main/product_list/3.jpg';
+import img4 from '../public/images/main/product_list/4.jpg';
+import img5 from '../public/images/main/product_list/5.jpg';
+import img6 from '../public/images/main/product_list/6.jpg';
 
 function App() {
 
@@ -45,12 +53,12 @@ function App() {
     };
 
     const products = [
-        {id: 1, img: "src/assets/images/main/product_list/1.png", price: "2 800 ₽", title: "Футболка мужская Комары"},
-        {id: 2, img: "src/assets/images/main/product_list/2.jpg", price: "2 700 ₽", title: "Свитшот женский укороченный Yamal est.2017"},
-        {id: 3, img: "src/assets/images/main/product_list/3.jpg", price: "1 550 ₽", title: "Шапка Yamal комбинация с бумбономапша"},
-        {id: 4, img: "src/assets/images/main/product_list/4.jpg", price: "640 ₽", title: "Брелок фирменный «Созвездие»"},
-        {id: 5, img: "src/assets/images/main/product_list/5.jpg", price: "3 850 ₽", title: "Шорты мужские Yamal"},
-        {id: 6, img: "src/assets/images/main/product_list/6.jpg", price: "10 000 ₽", title: "Сертификат Yamal 10000"},
+        {id: 1, img: img1, price: "2 800 ₽", oldprice: "3 500 ₽", discount: "-20%", title: "Футболка мужская Комары", description: "Описание товара", sizes: ["S", "M", "L", "XL"]},
+        {id: 2, img: img2, price: "2 700 ₽", oldprice: "3 000 ₽", discount: "-10%", title: "Свитшот женский укороченный Yamal est.2017", description: "Описание товара", sizes: ["S", "M", "L", "XL"]},
+        {id: 3, img: img3, price: "1 550 ₽", title: "Шапка Yamal комбинация с бумбономапша", description: "Описание товара", sizes: ["S", "M", "L", "XL"]},
+        {id: 4, img: img4, price: "640 ₽", oldprice: "800 ₽", discount: "-20%", title: "Брелок фирменный «Созвездие»", description: "Описание товара", sizes: null},
+        {id: 5, img: img5, price: "3 850 ₽", title: "Шорты мужские Yamal", description: "Описание товара", sizes: ["S", "M", "L", "XL"]},
+        {id: 6, img: img6, price: "10 000 ₽", title: "Сертификат Yamal 10000", description: "Описание товара", sizes: null},
     ];
 
     return (
@@ -91,6 +99,15 @@ function App() {
                         addToCart={addToCart}
                         removeFromCart={removeFromCart}
                         products={products}
+                    />} />
+
+                    <Route path="/product/:id" element={<ProductPage
+                        products={products}
+                        cart={cart}
+                        addToCart={addToCart}
+                        removeFromCart={removeFromCart}
+                        favorites={isFavorite}
+                        toggleFavorite={toggleFavorite}
                     />} />
                     <Route path="/profile" element={<Profile />} />
                 </Routes>

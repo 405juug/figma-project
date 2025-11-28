@@ -1,0 +1,141 @@
+@import 'src/assets/fonts.css';
+
+.product-page{
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px 90px;
+}
+
+.product-img{
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-title-card{
+    font-size: 40px;
+    font-weight: 700;
+    color: #292928;
+    margin-top: 4px;
+    font-family: inter_bold;
+    margin-bottom: 10px;
+}
+
+.product-price-card{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 4px;
+    color: #292928;
+    font-family: inter;
+}
+
+.favorite-btn img{
+    width: 28px;
+    height: 28px;
+}
+
+.product-description{
+    margin: 16px 0;
+    color: #292928;
+}
+
+.product-oldprice-card{
+    color: #2929284D;
+    font-family: 'inter';
+    font-weight: 500;
+    font-size: 15px;
+    align-self: center;
+    text-decoration: line-through;
+    margin-top: 4px;
+}
+
+.discount-card{
+    color: #F24131;
+    font-family: 'inter_semibold';
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    align-self: center;
+    margin-top: 4px;
+}
+
+.sizes-block h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: inter;
+    color: #292928;
+}
+
+.sizes-list{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.size-btn{
+    padding: 8px 16px;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "inter_bold";
+    cursor: pointer;
+}
+
+.size-btn.active{
+    border-color: black;
+    background: black;
+    color: white;
+}
+
+.add-to-cart-btn{
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: inter;
+    border: none;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.add-to-cart-btn:disabled{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.qty-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px
+}
+
+.qty-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(41, 41, 40, 0.1);
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: inter;
+    cursor: pointer;
+}
+
+.qty-number{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inter;
+}

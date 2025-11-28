@@ -63,7 +63,6 @@
     display: flex;
     gap: 12px;
     border-radius: 50%;
-    background: #F1F1F1;
 }
 
 .cart-item-controls:active,
@@ -75,7 +74,7 @@
 .qty-btn{
     width: 32px;
     height: 32px;
-    border-radius: 8px;
+    border-radius: 50%;
     border: none;
     background: #f2f3f5;
     font-size: 20px;

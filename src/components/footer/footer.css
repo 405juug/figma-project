@@ -36,21 +36,21 @@
 }
 
 .nav-item.active img.home{
-    content: url(src/assets/images/footer/home-active.png);
+    content: url(public/images/footer/home-active.png);
 }
 
 .nav-item.active img.catalog{
-    content: url(src/assets/images/footer/catalog-active.png);
+    content: url(public/images/footer/catalog-active.png);
 }
 
 .nav-item.active img.favorite{
-    content: url(src/assets/images/footer/favorite-active.png);
+    content: url(public/images/footer/favorite-active.png);
 }
 
 .nav-item.active img.cart{
-    content: url(src/assets/images/footer/cart-active.png);
+    content: url(public/images/footer/cart-active.png);
 }
 
 .nav-item.active img.profile{
-    content: url(src/assets/images/footer/account-active.png);
+    content: url(public/images/footer/account-active.png);
 }

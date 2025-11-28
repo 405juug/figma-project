@@ -1,4 +1,5 @@
 import React, {useEffect, useState, useRef} from "react";
+import { Link } from "react-router-dom";
 import './searchbar.css'
 
 
@@ -50,7 +51,7 @@ export default function SearchBar() {
                 className={`searchbar-container ${open ? "expanded" : ""}`}
                 onClick={() => setOpen(true)}
             >
-                <img src="src/assets/images/main/icon.png" className="searchbar-icon"/>
+                <img src="public/images/main/icon.png" className="searchbar-icon"/>
                 <input
                     className="search-input"
                     type="text"
@@ -77,9 +78,9 @@ export default function SearchBar() {
                         item.toLowerCase().includes(query.toLowerCase())
                     )
                         .map((item, i) => (
-                            <div key={i} className="suggestion-item">
-                                <img src="src/assets/images/main/icon.png" className="searchicon_searchbar" alt="searchicon" />
-                                <a href="#" className="suggestion-link">{item}</a>
+                                <div key={i} className="suggestion-item">
+                                    <img src="public/images/main/icon.png" className="searchicon_searchbar" alt="searchicon" />
+                                    <a href="#" className="suggestion-link">{item}</a>
                             </div>
                         ))}
                 </div>
