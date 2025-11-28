@@ -96,10 +96,11 @@
     width: 100%;
     border-radius: 20px;
     gap: 10px;
-    padding: 2px;
     display: flex;
     flex-direction: column;
     background: #fff;
+    border: 1px solid rgba(41, 41, 40, 0.4);
+    padding: 2px 2px 2px 2px;
 }
 
 .product-img-container {
@@ -206,12 +207,14 @@
 .product-text{
     display: flex;
     flex-direction: column;
+    min-height: 45px;
 }
 
 .product-price{
     display: flex;
     flex-direction: row;
     gap: 5px;
+    margin-bottom: 3px;
 }
 
 .quantity-controls{
@@ -227,10 +230,11 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    background: #292928;
     border: none;
-    background: #F1F1F1;
     font-size: 20px;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .qty-btn:active,
@@ -286,6 +290,7 @@
     font-weight: 500;
     font-size: 12px;
     outline: none;
+    /*margin-bottom: 10px;*/
 }
 
 .product-select:focus,
